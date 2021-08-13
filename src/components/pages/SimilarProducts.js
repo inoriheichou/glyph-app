@@ -1,34 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
-import { makeStyles, withStyles } from "@material-ui/core/styles";
-
+import { makeStyles } from "@material-ui/core/styles";
 import { getOtherFries } from "../DataFiles/Food.helper";
-import { Grid, Paper, Typography } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import ToggleButton from "@material-ui/lab/ToggleButton";
-import ToggleButtonGroup from "@material-ui/lab/ToggleButtonGroup";
-import MenuItem from "@material-ui/core/MenuItem";
-import Select from "@material-ui/core/Select";
-import Button from "@material-ui/core/Button";
-import FavoriteIcon from "@material-ui/icons/Favorite";
-import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
-import { LocalStorage } from "../DataFiles/LocalStorage";
 
-const ls = new LocalStorage();
-
-const CustomToggleButton = withStyles({
-  root: {
-    "& .MuiToggleButton-root.Mui-selected": {
-      backgroundColor: "#0CA8AC",
-      color: "#ffffff",
-    },
-    "& .MuiInputBase-root": {
-      "& input": {
-        borderRadius: "22px",
-      },
-    },
-  },
-})(ToggleButtonGroup);
 
 const useStyles = makeStyles((theme) => ({
   itemContainer: {
